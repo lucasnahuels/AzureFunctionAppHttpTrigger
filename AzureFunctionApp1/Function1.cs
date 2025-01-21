@@ -21,9 +21,9 @@ namespace AzureFunctionApp1
             string name = req.Query["name"];
             
             if(name != null)
-            log.LogInformation($"C# HTTP trigger function processed a request with the name {name}");
+                log.LogInformation($"C# HTTP trigger function processed a request with the name {name}");
             else
-            log.LogInformation($"C# HTTP trigger function processed a request with no name");
+                log.LogInformation($"C# HTTP trigger function processed a request with no name");
 
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             dynamic data = JsonConvert.DeserializeObject(requestBody);
