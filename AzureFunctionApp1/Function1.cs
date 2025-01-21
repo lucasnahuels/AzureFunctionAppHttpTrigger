@@ -10,10 +10,10 @@ using Newtonsoft.Json;
 
 namespace AzureFunctionApp1
 {
-    // query http://localhost:7120/api/Function1?name=YourName to run it
+    // query http://localhost:7120/api/HttpTriggerFunction?name=YourName to run it
     public static class Function1
     {
-        [FunctionName("Function1")]
+        [FunctionName("HttpTriggerFunction")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req,
             ILogger log)
